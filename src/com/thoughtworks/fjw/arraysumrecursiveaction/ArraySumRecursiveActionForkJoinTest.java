@@ -3,7 +3,6 @@ package com.thoughtworks.fjw.arraysumrecursiveaction;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
 
 import org.junit.Test;
@@ -16,11 +15,7 @@ public class ArraySumRecursiveActionForkJoinTest {
 
 	@Test
 	public void shouldCalculateTheSumOfAllArrayElements() {
-		int[] arrayToCalculateSumOf = new int[20000];
-		Random generator = new Random();
-		for (int i = 0; i < arrayToCalculateSumOf.length; i++) {
-			arrayToCalculateSumOf[i] = generator.nextInt(500000);
-		}
+		int[] arrayToCalculateSumOf = Utils.buildRandomIntArray();
 
 		StopWatch stopWatch = new LoggingStopWatch("singlethread");
 		long expected = 0;
@@ -37,8 +32,6 @@ public class ArraySumRecursiveActionForkJoinTest {
 		int nofProcessors = Runtime.getRuntime().availableProcessors();
 
 		ForkJoinPool forkJoinPool = new ForkJoinPool(nofProcessors);
-		// await and obtain result
-		// TODO try execute() and submit()
 		forkJoinPool.invoke(arraySumCalculator);
 		stopWatch.stop();
 

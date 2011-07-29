@@ -46,4 +46,19 @@ public class ArraySumRecursiveActionTest {
 		assertThat(arraySumCalculator.getResult(), is(expected));
 	}
 
+	@Test
+	public void testComputationIfTaskIsSmallEnoughToCalculateDirectly() {
+		int[] arrayToCalculateSumOf = new int[] { 1 };
+		ArraySumRecursiveAction arraySumCalculator = new ArraySumRecursiveAction(arrayToCalculateSumOf);
+
+		arraySumCalculator.compute();
+
+		assertThat((int) arraySumCalculator.getResult(), is(1));
+	}
+
+	@Test
+	public void testComputationIfTaskShouldBeSplitted() {
+		// not really possible, nor does it make sense
+	}
+
 }

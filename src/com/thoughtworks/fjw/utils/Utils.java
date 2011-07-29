@@ -2,6 +2,7 @@ package com.thoughtworks.fjw.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Random;
 
 public class Utils {
 
@@ -17,6 +18,24 @@ public class Utils {
 			digest.update((byte) i);
 			digest.digest();
 		}
+	}
+
+	public static int[] buildRandomIntArray() {
+		int[] arrayToCalculateSumOf = new int[20000];
+		Random generator = new Random();
+		for (int i = 0; i < arrayToCalculateSumOf.length; i++) {
+			arrayToCalculateSumOf[i] = generator.nextInt(500000);
+		}
+		return arrayToCalculateSumOf;
+	}
+
+	public static int[] buildRandomIntArrayForLogging() {
+		int[] arrayToCalculateSumOf = new int[10];
+		Random generator = new Random();
+		for (int i = 0; i < arrayToCalculateSumOf.length; i++) {
+			arrayToCalculateSumOf[i] = generator.nextInt(500000);
+		}
+		return arrayToCalculateSumOf;
 	}
 
 }

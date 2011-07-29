@@ -20,14 +20,17 @@ public class ArraySumRecursiveTask extends RecursiveTask<Long> {
 			return (long) arrayToCalculateSumOf[0];
 		}
 
-		// TODO github.com rumspielen -> aufsetzen
-		// TODO DO im laufe des tages plaudern
+		// mehrere tasks in einem forkjoinpool? geht das? Ja, geht
+
 		// TODO FR nach möglichkeit aufgaben benennen
 
-		// TODO was ist ein aufwändiger task?
+		// TODO mein hauptproblem: wie fuktioniert der steal mechanism
 		// TODO auf welcher ebene ist die taskqueue
-		// TODO mehrere tasks in einem forkjoinpool? was ist mit leichtgewichtigen?
-		// TODO was ist die summe aller tasks als bedeutung?
+		// was ist mit leichtgewichtigen? kann es zu starvation kommmen, weil die aufwändigen tasks vorrang haben?
+		// woher weiss das framework ob ein task aufwändig ist oder nicht?
+
+		// TODO was hat die summer aller tasks für ein name? ist es einfach die taskqueue evtl. ?
+
 		// TODO ganz einfacher sortieralgoryhtmus parallel machen
 		// TODO in den tasks das aufteilen und rechnen unterscheiden und unterschiedlich messen
 		//      events loggen mit den status und irgendwie zusammenführen, z.b. in zeitreihen
@@ -37,6 +40,8 @@ public class ArraySumRecursiveTask extends RecursiveTask<Long> {
 		// TODO DIM 1: try the auto steal avoid thinggy
 		// TODO DIM 2: more mechanisms of the fork join framework. Was bietet das framework noch?
 		//             was bringen die frameworkvarianten? wann das eine, das andere verwenden?
+		// TODO async mode: was heisst das?
+		// TODO verschiedene client methoden, execute/submit/invoke !! weiter untersuchen!
 
 		// split up the work into smaller parts (fork)
 		int midpoint = arrayToCalculateSumOf.length / 2;

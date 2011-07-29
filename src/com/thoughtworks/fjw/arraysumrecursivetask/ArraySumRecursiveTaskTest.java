@@ -3,7 +3,6 @@ package com.thoughtworks.fjw.arraysumrecursivetask;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
 
 import org.junit.Test;
@@ -16,11 +15,7 @@ public class ArraySumRecursiveTaskTest {
 
 	@Test
 	public void shouldCalculateTheSumOfAllArrayElements() {
-		int[] arrayToCalculateSumOf = new int[20000];
-		Random generator = new Random();
-		for (int i = 0; i < arrayToCalculateSumOf.length; i++) {
-			arrayToCalculateSumOf[i] = generator.nextInt(500000);
-		}
+		int[] arrayToCalculateSumOf = Utils.buildRandomIntArray();
 
 		StopWatch stopWatch = new LoggingStopWatch("singlethread");
 		long expected = 0;
