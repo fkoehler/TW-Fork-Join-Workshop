@@ -21,8 +21,6 @@ public class ArraySumRecursiveAction extends RecursiveAction {
 		return result;
 	}
 
-	// TODO write a test for this particular implementation
-	//      can i call the task atomatic
 	// - Warum sollte mich ein Berechnungsschritt in einem Algorhytmus interessieren? Warum reicht
 	//   mir nicht das Gesamtergebnis????
 	// Angenommen ich will es testen:
@@ -33,17 +31,14 @@ public class ArraySumRecursiveAction extends RecursiveAction {
 	// => Idee 1: Eine Klasse zwischen RecursiveAction schieben, dessen Zustand ich beim Testen abfragen kann
 	//    Produktionscode enthält eine spezielle Testschicht = unschön
 
-	// - Es gibt immer einen WorkerThread pro logischem processor der tasks abarbeitet
-	// - Die Tasks werden auf Worker-Threads verteilt, teilweise können sich dann queues bilden
-	// - Verdammt: Wer hat diese Queue? der Thread oder der Task oder der Pool? Vmtl. THread? 
-	//   Vmtl. kann ich die quue nicht einsehen?
-
+	// TODO suchalgorhytmen durchlesen für aufgaben
+	// TODO work stealing mechanism verstehen
 	// Aufbau:
 	// - Was ist parallel programming
 	// - Was machden die Klassen? + Feature, Executor
 	// - Bsp: Quersumme berechnen, was muss ich machen: Live zeigen!!
 	// - Setup:
-	// Bsp: - Selbst programmieren => einfacher Suchalgorhytmus, verteilte volltext suche, wie oft kommt string in text#
+	// Bsp: - Selbst programmieren => einfacher Suchalgorhytmus, verteilte volltext suche, wie oft kommt string in text
 	//      vor?
 
 	// Laufen lassen: boottime klasse

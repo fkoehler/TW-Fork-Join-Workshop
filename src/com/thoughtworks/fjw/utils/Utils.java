@@ -20,13 +20,17 @@ public class Utils {
 		}
 	}
 
-	public static int[] buildRandomIntArray() {
-		int[] arrayToCalculateSumOf = new int[20000];
+	public static int[] buildRandomIntArray(final int size) {
+		int[] arrayToCalculateSumOf = new int[size];
 		Random generator = new Random();
 		for (int i = 0; i < arrayToCalculateSumOf.length; i++) {
 			arrayToCalculateSumOf[i] = generator.nextInt(500000);
 		}
 		return arrayToCalculateSumOf;
+	}
+
+	public static int[] buildRandomIntArray() {
+		return buildRandomIntArray(20000);
 	}
 
 	public static int[] buildRandomIntArrayForLogging() {
