@@ -20,8 +20,6 @@ public class ArraySumRecursiveTask extends RecursiveTask<Long> {
 			return (long) arrayToCalculateSumOf[0];
 		}
 
-		// mehrere tasks in einem forkjoinpool? geht das? Ja, geht
-
 		// TODO mein hauptproblem: wie fuktioniert der steal mechanism
 		//   - jeder workerthread hat eine taskqueue
 		//   - angenommen am anfang sind ganz viele 

@@ -21,27 +21,6 @@ public class ArraySumRecursiveAction extends RecursiveAction {
 		return result;
 	}
 
-	// - Warum sollte mich ein Berechnungsschritt in einem Algorhytmus interessieren? Warum reicht
-	//   mir nicht das Gesamtergebnis????
-	// Angenommen ich will es testen:
-	// Woran bin ich interessiert im splitfall?
-	// - Das die Teilungsmenge jeweils korrekt berechnet wird
-	// - Das der Fork stattfindet mit zwei neuen Tasks
-	// - Das die eigentliche Berechnung korrekt ist
-	// => Idee 1: Eine Klasse zwischen RecursiveAction schieben, dessen Zustand ich beim Testen abfragen kann
-	//    Produktionscode enthält eine spezielle Testschicht = unschön
-
-	// TODO suchalgorhytmen durchlesen für aufgaben
-	// TODO work stealing mechanism verstehen
-	// Aufbau:
-	// - Was ist parallel programming
-	// - Was machden die Klassen? + Feature, Executor
-	// - Bsp: Quersumme berechnen, was muss ich machen: Live zeigen!!
-	// - Setup:
-	// Bsp: - Selbst programmieren => einfacher Suchalgorhytmus, verteilte volltext suche, wie oft kommt string in text
-	//      vor?
-
-	// Laufen lassen: boottime klasse
 	@Override
 	protected void compute() {
 		long threadId = Thread.currentThread().getId();
