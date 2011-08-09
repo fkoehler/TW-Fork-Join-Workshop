@@ -10,9 +10,9 @@ import java.util.logging.Logger;
 import com.thoughtworks.fjw.sort.ISorter;
 
 public class BucketSorter implements ISorter<Integer> {
-	private final Logger LOGGER = Logger.getLogger(BucketSorter.class.getCanonicalName());
+	private static final Logger LOGGER = Logger.getLogger(BucketSorter.class.getCanonicalName());
 
-	private SortedMap<Integer, List<Integer>> buckets;
+	private SortedMap<Integer, List<Integer>> bucketMap;
 	private IBucketSortHelper<Integer> bucketSorterHelper;
 	private int bucketCount;
 	private int bucketWidth;
@@ -51,14 +51,14 @@ public class BucketSorter implements ISorter<Integer> {
 	private void prepareBuckets() {
 
 		bucketWidth = calculateBucketWidth(maxValue - minValue);
-		buckets = new TreeMap<Integer, List<Integer>>();
+		bucketMap = new TreeMap<Integer, List<Integer>>();
 
 		/*
 		 * Why '+ minValue'? In order to make the index of the first bucket equal to the min value
 		 * of the list.
 		 */
 		for (int i = 0; i < bucketCount; i++) {
-			buckets.put(new Integer(i * bucketWidth + minValue), new ArrayList<Integer>());
+			bucketMap.put(new Integer(i * bucketWidth + minValue), new ArrayList<Integer>());
 		}
 	}
 
@@ -79,7 +79,7 @@ public class BucketSorter implements ISorter<Integer> {
 
 	private void fillBuckets(final List<Integer> aList) {
 		for (Integer anInteger : aList) {
-			buckets.get(calculateIndex(anInteger)).add(anInteger);
+			bucketMap.get(calculateIndex(anInteger)).add(anInteger);
 		}
 	}
 
@@ -91,13 +91,13 @@ public class BucketSorter implements ISorter<Integer> {
 	}
 
 	private void sortBuckets() {
-		bucketSorterHelper.sortBuckets(buckets);
+		bucketSorterHelper.sortBuckets(bucketMap);
 	}
 
 	private List<Integer> mergeBuckets() {
 		List<Integer> result = new ArrayList<Integer>();
 
-		for (List<Integer> aList : buckets.values()) {
+		for (List<Integer> aList : bucketMap.values()) {
 			result.addAll(aList);
 		}
 		return result;
@@ -127,7 +127,7 @@ public class BucketSorter implements ISorter<Integer> {
 
 	@Override
 	public String toString() {
-		return "BucketSorter [buckets=" + (buckets != null ? buckets.toString() : "null") + ", bucketSorterHelper="
+		return "BucketSorter [buckets=" + (bucketMap != null ? bucketMap.toString() : "null") + ", bucketSorterHelper="
 				+ (bucketSorterHelper != null ? bucketSorterHelper.toString() : "null") + ", bucketCount="
 				+ bucketCount + ", bucketWidth=" + bucketWidth + ", minValue=" + minValue + ", maxValue=" + maxValue
 				+ ", range=" + (maxValue - minValue) + "]";
