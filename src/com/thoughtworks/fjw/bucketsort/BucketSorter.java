@@ -22,7 +22,21 @@ public class BucketSorter implements ISorter<Integer> {
 	public BucketSorter(final IBucketSortHelper<Integer> aBucketSorterHelper, final int aBucketCount) {
 		bucketSorterHelper = aBucketSorterHelper;
 		setBucketCount(aBucketCount);
-		prepareBuckets();
+		prepareBucketMapAndBuckets();
+	}
+
+	/*
+	 * Allows to inject different kinds of bucket maps, e.g. a thread-safe one as opposed to an unsynchronised one. 
+	 * 
+	 * A bucket map that is injected is always cleared first.
+	 */
+	public BucketSorter(final IBucketSortHelper<Integer> aBucketSorterHelper, final int aBucketCount,
+			final SortedMap<Integer, List<Integer>> aBucketMap) {
+		bucketMap = aBucketMap;
+		bucketMap.clear();
+		bucketSorterHelper = aBucketSorterHelper;
+		setBucketCount(aBucketCount);
+		prepareBucketMapAndBuckets();
 	}
 
 	public BucketSorter(final IBucketSortHelper<Integer> aBucketSorterHelper, final int aBucketCount,
@@ -31,7 +45,7 @@ public class BucketSorter implements ISorter<Integer> {
 		setBucketCount(aBucketCount);
 		minValue = aMinValue;
 		maxValue = aMaxValue;
-		prepareBuckets();
+		prepareBucketMapAndBuckets();
 	}
 
 	@Override
@@ -48,10 +62,13 @@ public class BucketSorter implements ISorter<Integer> {
 		return result;
 	}
 
-	private void prepareBuckets() {
-
-		bucketWidth = calculateBucketWidth(maxValue - minValue);
+	private void prepareBucketMapAndBuckets() {
 		bucketMap = new TreeMap<Integer, List<Integer>>();
+		prepareBuckets();
+	}
+
+	private void prepareBuckets() {
+		bucketWidth = calculateBucketWidth(maxValue - minValue);
 
 		/*
 		 * Why '+ minValue'? In order to make the index of the first bucket equal to the min value
@@ -108,21 +125,32 @@ public class BucketSorter implements ISorter<Integer> {
 			throw new IllegalArgumentException("bucket count must be greater than 0");
 		}
 		bucketCount = aBucketCount;
-		prepareBuckets();
+		prepareBucketMapAndBuckets();
 	}
 
 	public void setBucketSorterHelper(final IBucketSortHelper<Integer> aBucketSorterHelper) {
 		bucketSorterHelper = aBucketSorterHelper;
 	}
 
+	/*
+	 * Allows to inject different kinds of bucket maps, e.g. a thread-safe one as opposed to an unsynchronised one. 
+	 * 
+	 * A bucket map that is injected is always cleared first.
+	 */
+	public void setBucketMap(final SortedMap<Integer, List<Integer>> aBucketMap) {
+		bucketMap = aBucketMap;
+		aBucketMap.clear();
+		prepareBuckets();
+	}
+
 	public void setMinValue(final int aMinValue) {
 		minValue = aMinValue;
-		prepareBuckets();
+		prepareBucketMapAndBuckets();
 	}
 
 	public void setMaxValue(final int aMaxValue) {
 		maxValue = aMaxValue;
-		prepareBuckets();
+		prepareBucketMapAndBuckets();
 	}
 
 	@Override

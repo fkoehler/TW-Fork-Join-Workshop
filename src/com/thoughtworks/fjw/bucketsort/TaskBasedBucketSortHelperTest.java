@@ -11,8 +11,11 @@ import org.junit.Test;
 
 import com.thoughtworks.fjw.utils.ListGenerator;
 
-public class ParallelBucketSortHelperTest {
-	private static final Logger LOGGER = Logger.getLogger(ParallelBucketSortHelperTest.class.getCanonicalName());
+/*
+ * TODO - distinguish between non-synchronised and synchronised bucket maps
+ */
+public class TaskBasedBucketSortHelperTest {
+	private static final Logger LOGGER = Logger.getLogger(TaskBasedBucketSortHelperTest.class.getCanonicalName());
 	private ListGenerator listGenerator;
 
 	@Before
@@ -23,7 +26,7 @@ public class ParallelBucketSortHelperTest {
 	@Test
 	public void shouldSortListOfIntegers() {
 
-		BucketSorter bucketSorter = new BucketSorter(new ParallelBucketSortHelper(), 4);
+		BucketSorter bucketSorter = new BucketSorter(new TaskBasedBucketSortHelper(), 4);
 		LOGGER.info(bucketSorter.toString());
 
 		List<Integer> inputList = listGenerator.createListOfNonNegativeIntegers(170, 1222);
