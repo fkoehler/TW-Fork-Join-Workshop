@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 import com.thoughtworks.fjw.sort.ISorter;
 
 public class BucketSorter implements ISorter<Integer> {
-	private final Logger LOGGER = Logger.getLogger(BucketSorter.class.getCanonicalName());
+	private static final Logger LOGGER = Logger.getLogger(BucketSorter.class.getCanonicalName());
 
 	private SortedMap<Integer, List<Integer>> bucketMap;
 	private IBucketSortHelper<Integer> bucketSorterHelper;

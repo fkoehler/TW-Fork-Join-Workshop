@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class BucketSorterTest {
-	private final Logger LOGGER = Logger.getLogger(BucketSorterTest.class.getCanonicalName());
+	private static final Logger LOGGER = Logger.getLogger(BucketSorterTest.class.getCanonicalName());
 	private BucketSorter bucketSorter;
 
 	@Before

@@ -10,7 +10,8 @@ import java.util.concurrent.RecursiveTask;
 import java.util.logging.Logger;
 
 public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, List<Integer>>> {
-	private final Logger LOGGER = Logger.getLogger(ParallelBucketSortTask.class.getCanonicalName());
+	private static final long serialVersionUID = 7227570740190481380L;
+	private static final Logger LOGGER = Logger.getLogger(ParallelBucketSortTask.class.getCanonicalName());
 	private SortedMap<Integer, List<Integer>> bucketMap;
 
 	public ParallelBucketSortTask(final SortedMap<Integer, List<Integer>> aBucketMap) {
@@ -37,7 +38,7 @@ public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, Lis
 		}
 	}
 
-	private Set<ParallelBucketSortTask> createSubTasks() {
+	Set<ParallelBucketSortTask> createSubTasks() {
 		Set<ParallelBucketSortTask> result = new HashSet<ParallelBucketSortTask>();
 
 		/*

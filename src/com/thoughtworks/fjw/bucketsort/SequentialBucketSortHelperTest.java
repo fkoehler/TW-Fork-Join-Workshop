@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.thoughtworks.fjw.utils.ListGenerator;
 
 public class SequentialBucketSortHelperTest {
-	private final Logger LOGGER = Logger.getLogger(SequentialBucketSortHelperTest.class.getCanonicalName());
+	private static final Logger LOGGER = Logger.getLogger(SequentialBucketSortHelperTest.class.getCanonicalName());
 	private ListGenerator listGenerator;
 
 	@Before
@@ -31,14 +31,7 @@ public class SequentialBucketSortHelperTest {
 		LOGGER.info(bucketSorter.toString());
 		LOGGER.info(output.toString());
 
-		assertListIsSorted(output);
-	}
-
-	private void assertListIsSorted(final List<Integer> list) {
-		for (int i = 0; i < list.size() - 1; i++) {
-			Assert.assertTrue(list.get(i).compareTo(list.get(i + 1)) <= 0);
-		}
-
+		Assert.assertTrue("list should be sorted", listGenerator.isListSorted(output));
 	}
 
 }

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  * Instantiate ForkJoinPool here and delegate to task
  */
 public class ParallelBucketSortHelper implements IBucketSortHelper<Integer> {
-	private final Logger LOGGER = Logger.getLogger(ParallelBucketSortHelper.class.getCanonicalName());
+	private static final Logger LOGGER = Logger.getLogger(ParallelBucketSortHelper.class.getCanonicalName());
 
 	@Override
 	public void sortBuckets(final SortedMap<Integer, List<Integer>> aBucketMap) {
