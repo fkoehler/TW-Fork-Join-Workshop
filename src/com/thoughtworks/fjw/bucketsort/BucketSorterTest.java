@@ -51,11 +51,14 @@ public class BucketSorterTest {
 
 		Assert.assertEquals("index for smalles integer should be equal to that integer", minValue,
 				bucketSorter.calculateIndex(new Integer(minValue)).intValue());
-		Assert.assertEquals("19 should be largest integer where index equals 7", 7,
-				bucketSorter.calculateIndex(new Integer(19)).intValue());
-		Assert.assertEquals("20 should be smallest integer where index equals 20", 20,
+
+		Assert.assertEquals("20 should be largest integer where index equals 7", 7,
 				bucketSorter.calculateIndex(new Integer(20)).intValue());
-		Assert.assertEquals("index for largest integer in range should be 33", 33,
+
+		Assert.assertEquals("21 should be smallest integer where index equals 21", 21,
+				bucketSorter.calculateIndex(new Integer(21)).intValue());
+
+		Assert.assertEquals("index for largest integer in range should be 35", 35,
 				bucketSorter.calculateIndex(new Integer(maxValue)).intValue());
 	}
 }

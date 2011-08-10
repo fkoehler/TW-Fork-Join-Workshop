@@ -9,12 +9,14 @@ import java.util.SortedMap;
 import java.util.concurrent.RecursiveAction;
 import java.util.logging.Logger;
 
+import com.thoughtworks.fjw.utils.TimeKeeper;
+
 /*
  * All ForkJoinTasks forked by this class are operating on (partial collections of) buckets that are backed by the same
  * (mother-)collection of buckets. The algorithm ensures that write operations
  */
 public class ParallelBucketSortAction extends RecursiveAction {
-	private static final long serialVersionUID = 7227570740190481380L;
+	private static final long serialVersionUID = -3065536639372469954L;
 	private static final Logger LOGGER = Logger.getLogger(ParallelBucketSortAction.class.getCanonicalName());
 	private SortedMap<Integer, List<Integer>> bucketMap;
 
@@ -26,10 +28,16 @@ public class ParallelBucketSortAction extends RecursiveAction {
 	@Override
 	protected void compute() {
 		if (bucketMap.size() > 1) {
+			TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " creating and invoking sub tasks",
+					Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.FORK);
+
 			Set<ParallelBucketSortAction> subTaskSet = createSubTasks();
 			invokeAll(subTaskSet);
 
 		} else {
+			TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " sorting a bucket",
+					Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.SORT_A_BUCKET);
+
 			Collections.sort(bucketMap.get(bucketMap.firstKey()));
 
 		}

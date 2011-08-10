@@ -3,7 +3,10 @@ package com.thoughtworks.fjw.bucketsort;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.concurrent.ForkJoinPool;
+import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.thoughtworks.fjw.utils.TimeKeeper;
 
 /*
  * Instantiate ForkJoinPool here and delegate to an action (as opposed to a task).
@@ -22,7 +25,13 @@ public class ActionBasedBucketSortHelper implements IBucketSortHelper<Integer> {
 		 * Seed the pool with initial action and get started
 		 */
 		ParallelBucketSortAction anAction = new ParallelBucketSortAction(aBucketMap);
-		LOGGER.info(anAction.toString());
+
+		if (LOGGER.isLoggable(Level.FINE)) {
+			LOGGER.fine(anAction.toString());
+		}
+
+		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " invoking forkJoinPool",
+				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.INVOKE);
 		forkJoinPool.invoke(anAction);
 
 	}
