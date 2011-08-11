@@ -106,16 +106,13 @@ public class TaskBasedBucketSortHelperTest {
 		long startTime = System.currentTimeMillis();
 		List<Integer> outputList = bucketSorter.sort(inputList);
 		long stopTime = System.currentTimeMillis();
-		logTimes(context, startTime, stopTime);
+		LOGGER.info(TimeKeeper.createLogMessage(context, Thread.currentThread().getId(), startTime, stopTime,
+				LogCode.END_OF_TEST_RUN));
 
 		LOGGER.fine(bucketSorter.toString());
 		LOGGER.fine(outputList.toString());
 
 		assertSortedList(inputList, outputList);
-	}
-
-	private void logTimes(final String context, final long startTime, final long stopTime) {
-		LOGGER.info(TimeKeeper.createLogMessage(context, Thread.currentThread().getId(), startTime, stopTime));
 	}
 
 	private void assertSortedList(final List<Integer> inputList, final List<Integer> outputList) {

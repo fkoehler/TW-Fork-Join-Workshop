@@ -13,7 +13,7 @@ public class SequentialBucketSortHelper implements IBucketSortHelper<Integer> {
 	@Override
 	public void sortBuckets(final SortedMap<Integer, List<Integer>> bucketMap) {
 		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " sorting all buckets",
-				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.SORT_ALL_BUCKETS));
+				Thread.currentThread().getId(), System.currentTimeMillis(), LogCode.SORT_ALL_BUCKETS));
 
 		for (List<Integer> aList : bucketMap.values()) {
 			Collections.sort(aList);

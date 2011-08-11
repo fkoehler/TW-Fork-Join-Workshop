@@ -30,14 +30,14 @@ public class ParallelBucketSortAction extends RecursiveAction {
 		if (bucketMap.size() > 1) {
 			LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName()
 					+ " creating and invoking sub tasks", Thread.currentThread().getId(), System.currentTimeMillis(),
-					ActionCode.FORK));
+					LogCode.FORK));
 
 			Set<ParallelBucketSortAction> subTaskSet = createSubTasks();
 			invokeAll(subTaskSet);
 
 		} else {
 			LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " sorting a bucket",
-					Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.SORT_A_BUCKET));
+					Thread.currentThread().getId(), System.currentTimeMillis(), LogCode.SORT_SINGLE_BUCKET));
 
 			Collections.sort(bucketMap.get(bucketMap.firstKey()));
 

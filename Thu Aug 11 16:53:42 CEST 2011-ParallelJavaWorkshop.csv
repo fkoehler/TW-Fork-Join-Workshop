@@ -1,0 +1,36 @@
+Aug 11, 2011 4:53:42 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313074422978 | n/a | n/a | PREPARE_BUCKETS
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313074423393 | n/a | n/a | PREPARE_BUCKETS
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.BucketSorter fillBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter filling buckets | 1 | 1313074423395 | n/a | n/a | FILL_BUCKETS
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.BucketSorter sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter sorting all buckets | 1 | 1313074423443 | n/a | n/a | SORT_ALL_BUCKETS
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper about to invoke forkJoinPool | 1 | 1313074423446 | n/a | n/a | INVOKE
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper having invoked forkJoinPool | 1 | 1313074423448 | 1313074423636 | 188 | INVOKE
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.BucketSorter mergeBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter merging buckets | 1 | 1313074423638 | n/a | n/a | MERGE_BUCKETS
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.BucketSorter sort
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter finished merging buckets | 1 | 1313074423645 | n/a | n/a | END_OF_MERGING_BUCKETS
+Aug 11, 2011 4:53:43 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelperTest shouldSortListOfIntegers
+INFO: Sorting 1000000 integers with unsynchronised buckets | 1 | 1313074423383 | 1313074423647 | 264 | END_OF_TEST_RUN
+Aug 11, 2011 4:53:45 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313074425633 | n/a | n/a | PREPARE_BUCKETS
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313074426402 | n/a | n/a | PREPARE_BUCKETS
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.BucketSorter fillBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter filling buckets | 1 | 1313074426405 | n/a | n/a | FILL_BUCKETS
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.BucketSorter sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter sorting all buckets | 1 | 1313074426474 | n/a | n/a | SORT_ALL_BUCKETS
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper about to invoke forkJoinPool | 1 | 1313074426476 | n/a | n/a | INVOKE
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper having invoked forkJoinPool | 1 | 1313074426478 | 1313074426676 | 198 | INVOKE
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.BucketSorter mergeBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter merging buckets | 1 | 1313074426678 | n/a | n/a | MERGE_BUCKETS
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.BucketSorter sort
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter finished merging buckets | 1 | 1313074426685 | n/a | n/a | END_OF_MERGING_BUCKETS
+Aug 11, 2011 4:53:46 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelperTest shouldSortListOfIntegers
+INFO: Sorting 1000000 integers with threadsafe buckets | 1 | 1313074426392 | 1313074426687 | 295 | END_OF_TEST_RUN

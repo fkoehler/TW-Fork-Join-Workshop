@@ -6,11 +6,12 @@ import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-import com.thoughtworks.fjw.bucketsort.ActionCode;
+import com.thoughtworks.fjw.bucketsort.LogCode;
 
 public class TimeKeeper {
 	static final String SEPARATOR = " | ";
 	private static final String DEFAULT_PATTERN = "-ParallelJavaWorkshop.csv";
+	private static final String N_A = "n/a";
 
 	private FileHandler fileHandler;
 
@@ -19,6 +20,9 @@ public class TimeKeeper {
 	}
 
 	public TimeKeeper(final String aPattern) throws SecurityException, IOException {
+		if (fileHandler != null) {
+			fileHandler.close();
+		}
 		fileHandler = new FileHandler(aPattern);
 		fileHandler.setFormatter(new SimpleFormatter());
 	}
@@ -28,7 +32,7 @@ public class TimeKeeper {
 	}
 
 	public static String createLogMessage(final String context, final long threadId, final long startTime,
-			final long stopTime) {
+			final long stopTime, final LogCode aCode) {
 		StringBuilder builder = new StringBuilder();
 
 		builder.append(context);
@@ -40,12 +44,14 @@ public class TimeKeeper {
 		builder.append(stopTime);
 		builder.append(SEPARATOR);
 		builder.append((stopTime - startTime));
+		builder.append(SEPARATOR);
+		builder.append(aCode);
 
 		return builder.toString();
 	}
 
 	public static String createLogMessage(final String context, final long threadId, final long startTime,
-			final ActionCode code) {
+			final LogCode aCode) {
 		StringBuilder builder = new StringBuilder();
 
 		builder.append(context);
@@ -53,6 +59,12 @@ public class TimeKeeper {
 		builder.append(threadId);
 		builder.append(SEPARATOR);
 		builder.append(startTime);
+		builder.append(SEPARATOR);
+		builder.append(N_A);
+		builder.append(SEPARATOR);
+		builder.append(N_A);
+		builder.append(SEPARATOR);
+		builder.append(aCode);
 
 		return builder.toString();
 	}
