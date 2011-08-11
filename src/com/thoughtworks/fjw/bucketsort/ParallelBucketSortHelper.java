@@ -22,7 +22,7 @@ public class ParallelBucketSortHelper implements IBucketSortHelper<Integer> {
 		 * Seed the pool with initial task and get started
 		 */
 		ParallelBucketSortTask aTask = new ParallelBucketSortTask(aBucketMap);
-		LOGGER.info(aTask.toString());
+		//LOGGER.info(aTask.toString());
 		forkJoinPool.invoke(aTask);
 
 	}

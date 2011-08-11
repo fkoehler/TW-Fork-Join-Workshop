@@ -8,10 +8,13 @@ import java.util.logging.Logger;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.perf4j.LoggingStopWatch;
+import org.perf4j.StopWatch;
 
 import com.thoughtworks.fjw.utils.ListGenerator;
 
 public class ParallelBucketSortHelperTest {
+
 	private static final Logger LOGGER = Logger.getLogger(ParallelBucketSortHelperTest.class.getCanonicalName());
 	private ListGenerator listGenerator;
 
@@ -23,15 +26,19 @@ public class ParallelBucketSortHelperTest {
 	@Test
 	public void shouldSortListOfIntegers() {
 
-		BucketSorter bucketSorter = new BucketSorter(new ParallelBucketSortHelper(), 4);
-		LOGGER.info(bucketSorter.toString());
+		List<Integer> inputList = listGenerator.createListOfNonNegativeIntegers(1000000, Integer.MAX_VALUE);
+		//LOGGER.info(inputList.toString());
 
-		List<Integer> inputList = listGenerator.createListOfNonNegativeIntegers(170, 1222);
-		LOGGER.info(inputList.toString());
+		StopWatch stopWatch = new LoggingStopWatch("multithread-bucktesortlistwolf");
+
+		BucketSorter bucketSorter = new BucketSorter(new ParallelBucketSortHelper(), 5);
+		//		LOGGER.info(bucketSorter.toString());
 
 		List<Integer> outputList = bucketSorter.sort(inputList);
-		LOGGER.info(bucketSorter.toString());
-		LOGGER.info(outputList.toString());
+		stopWatch.stop();
+
+		//		LOGGER.info(bucketSorter.toString());
+		//		LOGGER.info(outputList.toString());
 
 		Set<Integer> inputSet = new HashSet<Integer>();
 		inputSet.addAll(inputList);
