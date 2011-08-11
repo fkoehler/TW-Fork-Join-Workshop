@@ -1,5 +1,6 @@
 package com.thoughtworks.fjw.bucketsort;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -26,18 +27,30 @@ public class TaskBasedBucketSortHelperTest {
 	private int min;
 	private int max;
 	private int processorCount;
+	private TimeKeeper timeKeeper;
 
 	/*
 	 * Change list size, min and max values here
 	 */
 	@Before
-	public void setUp() {
+	public void setUp() throws SecurityException, IOException {
+		initialiseTimeKeeper();
 		listGenerator = new ListGenerator();
 		min = Integer.MAX_VALUE * 4 / 5;
 		max = Integer.MAX_VALUE;
 		listSize = LargeInts.ONE_MILLION;
 		//processorCount = Runtime.getRuntime().availableProcessors();
-		processorCount = 1;
+		processorCount = 4;
+
+	}
+
+	private void initialiseTimeKeeper() throws IOException {
+		timeKeeper = new TimeKeeper();
+		timeKeeper.addFileHandlerToLogger(Logger.getLogger(BucketSorter.class.getCanonicalName()));
+		timeKeeper.addFileHandlerToLogger(Logger.getLogger(SequentialBucketSortHelper.class.getCanonicalName()));
+		timeKeeper.addFileHandlerToLogger(Logger.getLogger(TaskBasedBucketSortHelper.class.getCanonicalName()));
+		timeKeeper.addFileHandlerToLogger(Logger.getLogger(ParallelBucketSortTask.class.getCanonicalName()));
+		timeKeeper.addFileHandlerToLogger(LOGGER);
 	}
 
 	/*
@@ -45,7 +58,7 @@ public class TaskBasedBucketSortHelperTest {
 	 */
 	private List<Integer> createInputList() {
 		List<Integer> inputList = listGenerator.createListOfNonNegativeIntegers(listSize, min, max);
-		inputList.add(0, new Integer(min));
+		//inputList.add(0, new Integer(min));
 		LOGGER.fine(inputList.toString());
 		return inputList;
 	}
@@ -102,7 +115,7 @@ public class TaskBasedBucketSortHelperTest {
 	}
 
 	private void logTimes(final String context, final long startTime, final long stopTime) {
-		TimeKeeper.logTimes(LOGGER, context, Thread.currentThread().getId(), startTime, stopTime);
+		LOGGER.info(TimeKeeper.createLogMessage(context, Thread.currentThread().getId(), startTime, stopTime));
 	}
 
 	private void assertSortedList(final List<Integer> inputList, final List<Integer> outputList) {

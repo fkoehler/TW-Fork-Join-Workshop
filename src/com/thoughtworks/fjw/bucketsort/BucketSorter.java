@@ -59,8 +59,8 @@ public class BucketSorter implements ISorter<Integer> {
 		sortBuckets();
 		result = mergeBuckets();
 
-		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " finished merging buckets",
-				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.DONE);
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " finished merging buckets",
+				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.DONE));
 
 		return result;
 	}
@@ -75,8 +75,8 @@ public class BucketSorter implements ISorter<Integer> {
 	}
 
 	private void prepareBuckets() {
-		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " preparing buckets", Thread.currentThread()
-				.getId(), System.currentTimeMillis(), ActionCode.PREPARE_BUCKETS);
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " preparing buckets",
+				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.PREPARE_BUCKETS));
 
 		bucketWidth = calculateBucketWidth(maxValue - minValue);
 
@@ -114,8 +114,8 @@ public class BucketSorter implements ISorter<Integer> {
 	}
 
 	private void fillBuckets(final List<Integer> aList) {
-		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " filling buckets", Thread.currentThread()
-				.getId(), System.currentTimeMillis(), ActionCode.PREPARE_BUCKETS);
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " filling buckets", Thread.currentThread()
+				.getId(), System.currentTimeMillis(), ActionCode.PREPARE_BUCKETS));
 
 		Integer bucketIndex = null;
 		for (Integer anInteger : aList) {
@@ -149,15 +149,15 @@ public class BucketSorter implements ISorter<Integer> {
 	}
 
 	private void sortBuckets() {
-		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " sorting all buckets", Thread.currentThread()
-				.getId(), System.currentTimeMillis(), ActionCode.SORT_ALL_BUCKETS);
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " sorting all buckets",
+				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.SORT_ALL_BUCKETS));
 
 		bucketSorterHelper.sortBuckets(bucketMap);
 	}
 
 	private List<Integer> mergeBuckets() {
-		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " merging buckets", Thread.currentThread()
-				.getId(), System.currentTimeMillis(), ActionCode.MERGE_BUCKETS);
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " merging buckets", Thread.currentThread()
+				.getId(), System.currentTimeMillis(), ActionCode.MERGE_BUCKETS));
 
 		List<Integer> result = new ArrayList<Integer>();
 

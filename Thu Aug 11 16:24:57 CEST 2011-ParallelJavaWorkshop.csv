@@ -1,0 +1,48 @@
+Aug 11, 2011 4:24:57 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313072697921
+Aug 11, 2011 4:24:57 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: before creating buckets bucketMap = {}
+Aug 11, 2011 4:24:57 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: after having created buckets bucketMap = {0=[], 1=[], 2=[], 3=[]}
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313072698321
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: before creating buckets bucketMap = {0=[], 1=[], 2=[], 3=[]}
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: after having created buckets bucketMap = {0=[], 1=[], 2=[], 3=[], 304=[], 715827838=[], 1431655372=[], 2147482906=[]}
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter fillBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter filling buckets | 1 | 1313072698328
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter sorting all buckets | 1 | 1313072698381
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper invoking forkJoinPool | 1 | 1313072698384
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter mergeBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter merging buckets | 1 | 1313072698660
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.BucketSorter sort
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter finished merging buckets | 1 | 1313072698667
+Aug 11, 2011 4:24:58 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelperTest logTimes
+INFO: Sorting 1000000 integers with unsynchronised buckets | 1 | 1313072698307 | 1313072698668 | 361
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313072700111
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: before creating buckets bucketMap = {}
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: after having created buckets bucketMap = {0=[], 1=[], 2=[], 3=[]}
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter preparing buckets | 1 | 1313072700659
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: before creating buckets bucketMap = {0=[], 1=[], 2=[], 3=[]}
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter prepareBuckets
+INFO: after having created buckets bucketMap = {0=[], 1=[], 2=[], 3=[], 1447=[], 715828777=[], 1431656107=[], 2147483437=[]}
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter fillBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter filling buckets | 1 | 1313072700665
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.BucketSorter sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter sorting all buckets | 1 | 1313072700729
+Aug 11, 2011 4:25:00 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper sortBuckets
+INFO: com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelper invoking forkJoinPool | 1 | 1313072700732
+Aug 11, 2011 4:25:01 PM com.thoughtworks.fjw.bucketsort.BucketSorter mergeBuckets
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter merging buckets | 1 | 1313072701009
+Aug 11, 2011 4:25:01 PM com.thoughtworks.fjw.bucketsort.BucketSorter sort
+INFO: com.thoughtworks.fjw.bucketsort.BucketSorter finished merging buckets | 1 | 1313072701018
+Aug 11, 2011 4:25:01 PM com.thoughtworks.fjw.bucketsort.TaskBasedBucketSortHelperTest logTimes
+INFO: Sorting 1000000 integers with threadsafe buckets | 1 | 1313072700652 | 1313072701020 | 368
