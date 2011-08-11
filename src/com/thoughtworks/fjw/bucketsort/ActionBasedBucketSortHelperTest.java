@@ -13,9 +13,8 @@ import org.perf4j.StopWatch;
 
 import com.thoughtworks.fjw.utils.ListGenerator;
 
-public class ParallelBucketSortHelperTest {
-
-	private static final Logger LOGGER = Logger.getLogger(ParallelBucketSortHelperTest.class.getCanonicalName());
+public class ActionBasedBucketSortHelperTest {
+	private static final Logger LOGGER = Logger.getLogger(ActionBasedBucketSortHelperTest.class.getCanonicalName());
 	private ListGenerator listGenerator;
 
 	@Before
@@ -25,12 +24,9 @@ public class ParallelBucketSortHelperTest {
 
 	@Test
 	public void shouldSortListOfIntegers() {
-
 		List<Integer> inputList = listGenerator.createListOfNonNegativeIntegers(1000000, Integer.MAX_VALUE);
-		//LOGGER.info(inputList.toString());
 
-		StopWatch stopWatch = new LoggingStopWatch("multithread-bucktesortlistwolf");
-
+	StopWatch stopWatch = new LoggingStopWatch("multithread-bucktesortlistwolf");
 		BucketSorter bucketSorter = new BucketSorter(new ParallelBucketSortHelper(), 5);
 		//		LOGGER.info(bucketSorter.toString());
 
@@ -49,7 +45,6 @@ public class ParallelBucketSortHelperTest {
 		Assert.assertEquals("sets derived from the input and output lists should contain the same elements", inputSet,
 				outputSet);
 		Assert.assertTrue("list should be sorted", listGenerator.isListSorted(outputList));
-
 	}
 
 }

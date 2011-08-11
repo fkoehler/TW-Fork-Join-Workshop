@@ -34,7 +34,7 @@ public class ListGeneratorTest {
 		Assert.assertTrue("list size should be " + size, aList.size() == size);
 		Assert.assertTrue("smallest value should be greater than " + (min - 1),
 				(Collections.max(aList).intValue() >= min));
-		Assert.assertTrue("largest value should be less than " + max, (Collections.max(aList).intValue() < max));
+		Assert.assertTrue("largest value should not exceed " + max, (Collections.max(aList).intValue() <= max));
 	}
 
 	@Test

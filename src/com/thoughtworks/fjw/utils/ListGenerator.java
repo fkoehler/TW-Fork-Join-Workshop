@@ -19,17 +19,10 @@ public class ListGenerator {
 		return result;
 	}
 
-	/*
-	 * Please note that 'min' is inclusive whereas 'max' is exclusive.
-	 */
 	public List<Integer> createListOfNonNegativeIntegers(final int size, final int min, final int max) {
 		List<Integer> result = new ArrayList<Integer>();
-		int buffer = 0;
-		while (result.size() < size) {
-			buffer = (int) (Math.random() * max);
-			if (buffer >= min && buffer < max) {
-				result.add(new Integer(buffer));
-			}
+		for (int i = 0; i < size; i++) {
+			result.add(new Integer(((int) (Math.random() * (max - min)) + min)));
 		}
 		return result;
 	}
