@@ -26,7 +26,7 @@ public class ActionBasedBucketSortHelperTest {
 	public void shouldSortListOfIntegers() {
 		List<Integer> inputList = listGenerator.createListOfNonNegativeIntegers(1000000, Integer.MAX_VALUE);
 
-	StopWatch stopWatch = new LoggingStopWatch("multithread-bucktesortlistwolf");
+		StopWatch stopWatch = new LoggingStopWatch("multithread-bucktesortlistwolf");
 		BucketSorter bucketSorter = new BucketSorter(new ParallelBucketSortHelper(), 5);
 		//		LOGGER.info(bucketSorter.toString());
 
