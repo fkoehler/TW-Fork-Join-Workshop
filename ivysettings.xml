@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivysettings>
+	<settings defaultResolver="main"/>
+	<resolvers>
+		<chain name="main" returnFirst="true">
+			<ibiblio name="public" m2compatible="true"/>
+		</chain>
+	</resolvers>
+</ivysettings>

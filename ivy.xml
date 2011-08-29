@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	<info organisation="com.thoughtworks" module="fjw" status="integration"/>
+
+	<configurations>
+		<conf name="compile" description="compile-time libs" />
+		<conf name="test" extends="compile" description="testing libs" />
+		<conf name="sources" extends="compile" description="sources of the libs" />
+	</configurations>
+
+	<dependencies>
+		<dependency conf="compile->*;sources->@" org="org.perf4j" name="perf4j" rev="0.9.13"/>
+		<dependency conf="compile->*;sources->@" org="org.codehaus.jsr166-mirror" name="jsr166" rev="1.7.0"/>
+
+		<dependency conf="test->*;sources->*" org="junit" name="junit" rev="4.8.1"/>
+	</dependencies>
+
+</ivy-module>
