@@ -1,26 +1,27 @@
-package com.thoughtworks.fjw.bucketsortfab;
+package com.thoughtworks.fjw.bucketsortfablists;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.RecursiveTask;
 
-public class BucketSortTask extends RecursiveTask<int[]> {
+public class BucketSortTask extends RecursiveTask<List<Integer>> {
 
 	private static final long serialVersionUID = 1L;
 
-	private final int[] arrayToSort;
+	private final List<Integer> listToSort;
 	private final int nofBuckets;
 	private int bucketToExamine = -1;
-	private int[] bucket;
+	private List<Integer> bucket;
 
-	public BucketSortTask(final int[] arrayToSort, final int nofBuckets, final int bucketToExamine) {
-		this.arrayToSort = arrayToSort;
+	public BucketSortTask(final List<Integer> arrayToSort, final int nofBuckets, final int bucketToExamine) {
+		listToSort = arrayToSort;
 		this.nofBuckets = nofBuckets;
 		this.bucketToExamine = bucketToExamine;
 	}
 
-	public BucketSortTask(final int[] arrayToSort, final int nofBuckets) {
+	public BucketSortTask(final List<Integer> arrayToSort, final int nofBuckets) {
 		this(arrayToSort, nofBuckets, -1);
 	}
 
@@ -34,11 +35,11 @@ public class BucketSortTask extends RecursiveTask<int[]> {
 	 * => no real d&c, no clear big/small tasks, no real tree structure
 	 */
 	@Override
-	protected int[] compute() {
+	protected List<Integer> compute() {
 		if (bucketToExamine >= 0) {
 			// do a calculation for the bucket
 			prepareAndFillBucket();
-			Arrays.sort(bucket);
+			Collections.sort(bucket);
 
 			return bucket;
 		}
@@ -50,13 +51,12 @@ public class BucketSortTask extends RecursiveTask<int[]> {
 		}
 
 		// no join them back again by merging the buckets
-		int[] merged = new int[arrayToSort.length];
-		int bucketCount = 0;
+		List<Integer> merged = new LinkedList<Integer>();
 		for (BucketSortTask bucketSortTask : tasks) {
-			int[] bucket = bucketSortTask.join();
+			List<Integer> bucket = bucketSortTask.join();
 			for (int element : bucket) {
 				if (element != -1) {
-					merged[bucketCount++] = element;
+					merged.add(element);
 				}
 			}
 		}
@@ -68,7 +68,7 @@ public class BucketSortTask extends RecursiveTask<int[]> {
 	List<BucketSortTask> createBucketSortTasks() {
 		List<BucketSortTask> tasks = new ArrayList<BucketSortTask>();
 		for (int bucket = 0; bucket < nofBuckets; bucket++) {
-			BucketSortTask bucketSortTask = new BucketSortTask(arrayToSort, nofBuckets, bucket);
+			BucketSortTask bucketSortTask = new BucketSortTask(listToSort, nofBuckets, bucket);
 			tasks.add(bucketSortTask);
 		}
 
@@ -76,9 +76,9 @@ public class BucketSortTask extends RecursiveTask<int[]> {
 	}
 
 	private void prepareAndFillBucket() {
-		int maxElementToSort = getMaxIntFromArray(arrayToSort);
+		int maxElementToSort = Collections.max(listToSort);
 
-		bucket = new int[arrayToSort.length];
+		bucket = new LinkedList<Integer>();
 
 		int bucketRangeStart = bucketToExamine * (int) Math.ceil((double) maxElementToSort / nofBuckets);
 		int bucketRangeEnd = (bucketToExamine + 1) * (int) Math.ceil((double) maxElementToSort / nofBuckets);
@@ -86,28 +86,13 @@ public class BucketSortTask extends RecursiveTask<int[]> {
 			bucketRangeEnd++;
 		}
 
-		int bucketElementCount = 0;
-
-		for (int elementToSort : arrayToSort) {
+		for (int elementToSort : listToSort) {
 			if (elementToSort >= bucketRangeStart && elementToSort < bucketRangeEnd) {
-				bucket[bucketElementCount] = elementToSort;
+				bucket.add(elementToSort);
 			} else {
-				bucket[bucketElementCount] = -1;
-			}
-
-			bucketElementCount++;
-		}
-	}
-
-	int getMaxIntFromArray(final int[] array) {
-		int max = array[0];
-		for (int l : array) {
-			if (max < l) {
-				max = l;
+				bucket.add(-1);
 			}
 		}
-
-		return max;
 	}
 
 }
