@@ -1,5 +1,30 @@
-This project contains all demos and examples for the HerbstCampus2011 Fork/Join Workshop. Have fun!
+This project contains all examples solutions for the HerbstCampus2011 Fork/Join Workshop. Have fun!
 
-Adding a line for git testing
-Oh, I want to add another line
-Forgot this line in the commit
+how to use:
+
+- prerequisites:
+  - installed ant, if to be build via command line
+  - installed jdk7
+    - mac os x
+	  32 & 64 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/OpenJDK-OSX-1.7-universal-20110730.dmg
+	- windows:
+      64 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/jdk-7-windows-x64.exe
+	  32 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/jdk-7-windows-i586.exe
+	- linux:
+	  64 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/jdk-7-linux-x64.tar.gz
+	  32 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/jdk-7-linux-i586.tar.gz
+  - sourcen zum download:
+    - 
+	
+- for command line build:
+  - cd into project directory
+  - adjust build.bat or build.sh and add path to installed jdk7
+  - execute build.sh
+  
+- for IDE runners:
+  - set up the new JDK inside you IDE and name it "Herbstcampus JDK 1.7.0"
+  - open the project
+    - if the naming didn't work out set the newly installed JDK directly
+  - run tests via the normal test runners
+  
+  

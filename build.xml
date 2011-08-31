@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="fjw" default="test" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="fjw" default="test" basedir=".">
 
-	<property name="jvm.path" value="C:\Program Files\Java\jdk1.7.0\bin\java" />
-	
 	<property name="build.dir" value="build" />
 	<property name="build.classes.dir" value="${build.dir}/classes" />
 	
 	<property name="lib.dir" value="lib" />
-	<property name="lib.compile.dir" value="${lib.dir}/compile" />
-	<property name="lib.test.dir" value="${lib.dir}/test" />
 	
 	<property name="src.dir" value="src" />
 
-	<property name="ivy.install.version" value="2.2.0" />
-	<property name="ivy.jar.file" value="${lib.dir}/ivy.jar" />
-
 	<path id="compile.class.path">
-		<fileset dir="${lib.compile.dir}" includes="**/*.jar" />
-		<fileset dir="${lib.test.dir}" includes="**/*.jar" />
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
 	</path>
 
 	<path id="test.class.path">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
 		<pathelement location="${build.classes.dir}" />
-		<fileset dir="${lib.test.dir}" includes="**/*.jar" />
 	</path>
 	
-	<target name="compile" depends="retrieve-deps" description="Compile java source">
+	<target name="compile" description="Compile java source">
 		<delete dir="${build.dir}" />
 		<mkdir dir="${build.classes.dir}" />
 
@@ -40,7 +32,7 @@
 
 	<target name="test" depends="compile" description="run the unit tests">
 		<mkdir dir="${build.dir}/reports/test" />
-		<junit fork="once" printsummary="no" haltonfailure="yes" jvm="${jvm.path}">
+		<junit fork="true" printsummary="no" haltonfailure="yes">
 			<classpath refid="test.class.path" />
 			<batchtest todir="${build.dir}/reports/test">
 				<fileset dir="${src.dir}">
@@ -52,32 +44,4 @@
 		</junit>
 	</target>
 	
-	<target name="download-ivy">
-		<echo message="downloading ivy ..." />
-		<get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar"
-		     dest="${ivy.jar.file}"
-		     usetimestamp="true"
-		     verbose="on"
-		     skipexisting="false" />
-	</target>
-
-	<target name="install-ivy" depends="download-ivy">
-		<path id="ivy.lib.path">
-			<fileset dir="lib" includes="ivy.jar" />
-		</path>
-		<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path" />
-	</target>
-
-	<target name="resolve-deps" depends="install-ivy" description="resolve deps and load them in the ivy cache">
-		<ivy:settings file="ivysettings.xml" />
-		<ivy:resolve />
-	</target>
-
-	<target name="retrieve-deps" depends="resolve-deps" description="copy deps into project">
-		<ivy:settings file="ivysettings.xml" />
-		<ivy:retrieve conf="compile" type="jar" pattern="lib/[conf]/[artifact].[ext]" />
-		<ivy:retrieve conf="test" type="jar" pattern="lib/[conf]/[artifact].[ext]" />
-		<ivy:retrieve conf="sources" type="source" pattern="lib/[conf]/[artifact].[ext]" />
-	</target>
-
 </project>

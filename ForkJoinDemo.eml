@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/src"/>
+	</contentEntry>
+	<lib name="perf4j-0.9.13.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TW-Fork-Join-Workshop/lib/perf4j-0.9.13.jar!/"/>
+	</lib>
+	<lib name="ujmp-complete-0.2.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TW-Fork-Join-Workshop/lib/ujmp-complete-0.2.5.jar!/"/>
+	</lib>
+	<lib name="junit-4.8.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TW-Fork-Join-Workshop/lib/junit-4.8.2.jar!/"/>
+	</lib>
+	<lib name="jsr166.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TW-Fork-Join-Workshop/lib/jsr166.jar!/"/>
+	</lib>
+	<lib name="org.hamcrest.core_1.1.0.v20090501071000.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/TW-Fork-Join-Workshop/lib/org.hamcrest.core_1.1.0.v20090501071000.jar!/"/>
+	</lib>
+</component>

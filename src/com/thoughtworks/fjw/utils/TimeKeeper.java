@@ -2,8 +2,6 @@ package com.thoughtworks.fjw.utils;
 
 import java.util.logging.Logger;
 
-import com.thoughtworks.fjw.bucketsort.ActionCode;
-
 public class TimeKeeper {
 	static final String SEPARATOR = " | ";
 
@@ -18,7 +16,7 @@ public class TimeKeeper {
 		builder.append(SEPARATOR);
 		builder.append(stopTime);
 		builder.append(SEPARATOR);
-		builder.append((stopTime - startTime));
+		builder.append(stopTime - startTime);
 		logger.info(builder.toString());
 	}
 

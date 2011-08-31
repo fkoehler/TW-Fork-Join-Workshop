@@ -42,4 +42,13 @@ public class Utils {
 		return arrayToCalculateSumOf;
 	}
 
+	public static long calculateSumOfArray(final int[] arrayToCalculateSumOf) {
+		long expected = 0;
+		for (int value : arrayToCalculateSumOf) {
+			expected += value;
+		}
+
+		return expected;
+	}
+
 }

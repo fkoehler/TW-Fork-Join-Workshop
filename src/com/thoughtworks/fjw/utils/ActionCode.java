@@ -1,4 +1,4 @@
-package com.thoughtworks.fjw.bucketsort;
+package com.thoughtworks.fjw.utils;
 
 public enum ActionCode {
 	DONE,
