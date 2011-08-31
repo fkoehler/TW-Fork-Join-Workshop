@@ -1,0 +1,14 @@
+package com.thoughtworks.fjw.bucketsort;
+
+public enum LogCode {
+	END_OF_MERGING_BUCKETS,
+	END_OF_TEST_RUN,
+	FILL_BUCKETS,
+	FORK,
+	INVOKE,
+	JOIN,
+	MERGE_BUCKETS,
+	PREPARE_BUCKETS,
+	SORT_ALL_BUCKETS,
+	SORT_SINGLE_BUCKET
+}

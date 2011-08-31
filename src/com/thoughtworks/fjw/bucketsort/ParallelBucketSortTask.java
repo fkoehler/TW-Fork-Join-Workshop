@@ -9,7 +9,6 @@ import java.util.SortedMap;
 import java.util.concurrent.RecursiveTask;
 import java.util.logging.Logger;
 
-import com.thoughtworks.fjw.utils.ActionCode;
 import com.thoughtworks.fjw.utils.TimeKeeper;
 
 public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, List<Integer>>> {
@@ -25,21 +24,22 @@ public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, Lis
 	@Override
 	protected SortedMap<Integer, List<Integer>> compute() {
 		if (bucketMap.size() > 1) {
-			TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " creating and invoking sub tasks",
-					Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.FORK);
+			LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName()
+					+ " creating and invoking sub tasks", Thread.currentThread().getId(), System.currentTimeMillis(),
+					LogCode.FORK));
 
 			Set<ParallelBucketSortTask> subTaskSet = createSubTasks();
 			invokeAll(subTaskSet);
 
-			/*
+			/* 
 			 * Aggregation of partial results is not required as sub-buckets are backed 
 			 * by the mother-bucket
 			 */
 			return bucketMap;
 
 		} else {
-			TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " sorting a bucket",
-					Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.SORT_A_BUCKET);
+			LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " sorting a bucket",
+					Thread.currentThread().getId(), System.currentTimeMillis(), LogCode.SORT_SINGLE_BUCKET));
 
 			Collections.sort(bucketMap.get(bucketMap.firstKey()));
 			return bucketMap;

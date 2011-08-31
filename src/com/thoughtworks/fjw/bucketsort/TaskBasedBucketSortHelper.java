@@ -6,7 +6,6 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.thoughtworks.fjw.utils.ActionCode;
 import com.thoughtworks.fjw.utils.TimeKeeper;
 
 /*
@@ -31,9 +30,15 @@ public class TaskBasedBucketSortHelper implements IBucketSortHelper<Integer> {
 			LOGGER.fine(aTask.toString());
 		}
 
-		TimeKeeper.logTimes(LOGGER, this.getClass().getCanonicalName() + " invoking forkJoinPool",
-				Thread.currentThread().getId(), System.currentTimeMillis(), ActionCode.INVOKE);
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " about to invoke forkJoinPool",
+				Thread.currentThread().getId(), System.currentTimeMillis(), LogCode.INVOKE));
+		long start = System.currentTimeMillis();
+
 		forkJoinPool.invoke(aTask);
+
+		long stop = System.currentTimeMillis();
+		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " having invoked forkJoinPool",
+				Thread.currentThread().getId(), start, stop, LogCode.INVOKE));
 	}
 
 }
