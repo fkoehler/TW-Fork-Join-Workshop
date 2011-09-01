@@ -6,6 +6,8 @@ import java.util.concurrent.RecursiveTask;
 public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 
 	private final int[] arrayToCalculateSumOf;
+	private ArraySumRecursiveTask leftTask;
+	private ArraySumRecursiveTask rightTask;
 
 	public ArraySumRecursiveTask(final int[] arrayToCalculateSumOf) {
 		this.arrayToCalculateSumOf = arrayToCalculateSumOf;
@@ -13,30 +15,48 @@ public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 
 	@Override
 	protected Integer compute() {
-		// if (my portion of the work is small enough)
-		if (arrayToCalculateSumOf.length == 2) {
-			// do the work directly
-			return arrayToCalculateSumOf[0] + arrayToCalculateSumOf[1];
-		} else if (arrayToCalculateSumOf.length == 1) {
-			// do the work directly
-			return arrayToCalculateSumOf[0];
+		if (workingUnitSmallEnough()) {
+			return computeDirectly();
 		}
 
-		//  split my work into two pieces
-		int midpoint = arrayToCalculateSumOf.length / 2;
-		int[] left = Arrays.copyOfRange(arrayToCalculateSumOf, 0, midpoint);
-		ArraySumRecursiveTask leftTask = new ArraySumRecursiveTask(left);
+		forkTasks();
+		return joinTasks();
+	}
 
-		int[] right = Arrays.copyOfRange(arrayToCalculateSumOf, midpoint, arrayToCalculateSumOf.length);
-		ArraySumRecursiveTask rightTask = new ArraySumRecursiveTask(right);
+	private boolean workingUnitSmallEnough() {
+		return arrayToCalculateSumOf.length == 1;
+	}
 
-		//  invoke the two pieces and wait for the results and merge them
+	private int computeDirectly() {
+		return arrayToCalculateSumOf[0];
+	}
+
+	private void forkTasks() {
+		int[] left = getLeftPart();
+		int[] right = getRightPart();
+
+		leftTask = new ArraySumRecursiveTask(left);
+		rightTask = new ArraySumRecursiveTask(right);
+
 		leftTask.fork();
+		rightTask.fork();
+	}
 
-		int rightResult = rightTask.compute();
-		int leftResult = leftTask.join();
+	int[] getLeftPart() {
+		int midpoint = arrayToCalculateSumOf.length / 2;
+		return Arrays.copyOfRange(arrayToCalculateSumOf, 0, midpoint);
+	}
 
-		// merge results
+	int[] getRightPart() {
+		int midpoint = arrayToCalculateSumOf.length / 2;
+		return Arrays.copyOfRange(arrayToCalculateSumOf, midpoint, arrayToCalculateSumOf.length);
+	}
+
+	private int joinTasks() {
+		return mergeResults(leftTask.join(), rightTask.join());
+	}
+
+	static int mergeResults(final int leftResult, final int rightResult) {
 		return leftResult + rightResult;
 	}
 

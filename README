@@ -13,8 +13,11 @@ how to use:
 	- linux:
 	  64 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/jdk-7-linux-x64.tar.gz
 	  32 bit: http://dl.dropbox.com/u/37995011/Tools/jdks/jdk-7-linux-i586.tar.gz
-  - sourcen zum download:
-    - 
+  - sources:
+    - zips
+      - 
+    - git@github.com:fkoehler/TW-FJW-Example.git
+	- git@github.com:fkoehler/TW-Fork-Join-Workshop.git
 	
 - for command line build:
   - cd into project directory
@@ -26,5 +29,4 @@ how to use:
   - open the project
     - if the naming didn't work out set the newly installed JDK directly
   - run tests via the normal test runners
-  
   

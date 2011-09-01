@@ -19,6 +19,8 @@ public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, Lis
 	public ParallelBucketSortTask(final SortedMap<Integer, List<Integer>> aBucketMap) {
 		super();
 		bucketMap = aBucketMap;
+
+		LOGGER.addHandler(TimeKeeper.getFileHandler());
 	}
 
 	@Override
@@ -38,8 +40,9 @@ public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, Lis
 			return bucketMap;
 
 		} else {
-			LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " sorting a bucket",
-					Thread.currentThread().getId(), System.currentTimeMillis(), LogCode.SORT_SINGLE_BUCKET));
+			LOGGER.info(TimeKeeper.createLogMessage(ParallelBucketSortTask.class.getCanonicalName()
+					+ " sorting a bucket", Thread.currentThread().getId(), System.currentTimeMillis(),
+					LogCode.SORT_SINGLE_BUCKET));
 
 			Collections.sort(bucketMap.get(bucketMap.firstKey()));
 			return bucketMap;
