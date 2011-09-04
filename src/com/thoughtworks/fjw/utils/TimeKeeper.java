@@ -2,6 +2,7 @@ package com.thoughtworks.fjw.utils;
 
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -14,14 +15,14 @@ public class TimeKeeper {
 	private static final String DEFAULT_PATTERN = "-ParallelJavaWorkshop.csv";
 	private static final String N_A = "n/a";
 
-	private static FileHandler fileHandler;
+	private FileHandler fileHandler;
 
 	public TimeKeeper() throws SecurityException, IOException {
 		this(getLogFileName());
 	}
 
 	private static String getLogFileName() {
-		DateFormat df = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.MEDIUM);
+		DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 		String dateTime = df.format(new Date());
 
 		return sanitizeFilename(dateTime) + DEFAULT_PATTERN;
@@ -37,14 +38,14 @@ public class TimeKeeper {
 		}
 
 		fileHandler = new FileHandler(aPattern);
-		fileHandler.setFormatter(new StrFormatter());
+		fileHandler.setFormatter(new SimpleFormatter());
 	}
 
 	public void addFileHandlerToLogger(final Logger aLogger) throws SecurityException, IOException {
 		aLogger.addHandler(fileHandler);
 	}
 
-	public static FileHandler getFileHandler() {
+	public FileHandler getFileHandler() {
 		return fileHandler;
 	}
 

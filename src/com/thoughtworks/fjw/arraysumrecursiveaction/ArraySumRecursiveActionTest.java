@@ -56,9 +56,4 @@ public class ArraySumRecursiveActionTest {
 		assertThat((int) arraySumCalculator.getResult(), is(1));
 	}
 
-	@Test
-	public void testComputationIfTaskShouldBeSplitted() {
-		// not really possible, nor does it make sense
-	}
-
 }

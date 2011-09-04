@@ -8,6 +8,7 @@ import java.util.TreeMap;
 import java.util.logging.Logger;
 
 import com.thoughtworks.fjw.sort.ISorter;
+import com.thoughtworks.fjw.utils.LogCode;
 import com.thoughtworks.fjw.utils.TimeKeeper;
 
 public class BucketSorter implements ISorter<Integer> {

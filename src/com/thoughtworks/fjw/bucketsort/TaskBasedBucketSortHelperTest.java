@@ -17,9 +17,6 @@ import com.thoughtworks.fjw.utils.LargeInts;
 import com.thoughtworks.fjw.utils.ListGenerator;
 import com.thoughtworks.fjw.utils.TimeKeeper;
 
-/*
- * TODO - distinguish between non-synchronised and synchronised bucket maps
- */
 public class TaskBasedBucketSortHelperTest {
 	private static final Logger LOGGER = Logger.getLogger(TaskBasedBucketSortHelperTest.class.getCanonicalName());
 	private ListGenerator listGenerator;

@@ -32,8 +32,6 @@ public class ArraySumRecursiveAction extends RecursiveAction {
 
 			String msg2 = String.format("Thread id:%d name:%s => Starting calculation\n", threadId, name);
 			msg2 += String.format("do simple calculation: %d\n", result);
-			msg2 += String.format("queued task count: %d\n", getQueuedTaskCount());
-			msg2 += String.format("steal count: %d\n", getPool().getStealCount());
 
 			LOGGER.info(msg2);
 

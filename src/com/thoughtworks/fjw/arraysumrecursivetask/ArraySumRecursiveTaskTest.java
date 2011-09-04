@@ -18,7 +18,7 @@ public class ArraySumRecursiveTaskTest {
 		int[] arrayToCalculateSumOf = Utils.buildRandomIntArray();
 
 		StopWatch stopWatch = new LoggingStopWatch("singlethread");
-		long expected = 0;
+		int expected = 0;
 		for (int value : arrayToCalculateSumOf) {
 			Utils.doCpuIntensiveCalculation();
 
@@ -33,7 +33,7 @@ public class ArraySumRecursiveTaskTest {
 
 		ForkJoinPool forkJoinPool = new ForkJoinPool(nofProcessors);
 
-		long result = forkJoinPool.invoke(arraySumCalculator);
+		int result = forkJoinPool.invoke(arraySumCalculator);
 		stopWatch.stop();
 
 		assertThat(result, is(expected));
