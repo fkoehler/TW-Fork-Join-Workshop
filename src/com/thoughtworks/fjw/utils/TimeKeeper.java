@@ -6,8 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
-
-import com.thoughtworks.fjw.bucketsort.LogCode;
+import java.util.logging.SimpleFormatter;
 
 public class TimeKeeper {
 

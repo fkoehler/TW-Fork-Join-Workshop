@@ -15,6 +15,7 @@ import org.junit.Test;
 
 import com.thoughtworks.fjw.utils.LargeInts;
 import com.thoughtworks.fjw.utils.ListGenerator;
+import com.thoughtworks.fjw.utils.LogCode;
 import com.thoughtworks.fjw.utils.TimeKeeper;
 
 public class TaskBasedBucketSortHelperTest {

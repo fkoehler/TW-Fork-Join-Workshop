@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="fjw" default="test" basedir=".">
 
+	<property file="build.properties"/>
+	
 	<property name="build.dir" value="build" />
 	<property name="build.classes.dir" value="${build.dir}/classes" />
 	
@@ -36,7 +38,7 @@
 			<classpath refid="test.class.path" />
 			<batchtest todir="${build.dir}/reports/test">
 				<fileset dir="${src.dir}">
-					<include name="**/*Test.java" />
+					<include name="${junit.test.include}" />
 				</fileset>
 				<formatter type="plain" usefile="false" />
 			</batchtest>
