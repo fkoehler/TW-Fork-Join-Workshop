@@ -32,7 +32,7 @@ public class ArraySumRecursiveTaskTest {
 }
 
 		if (workingUnitSmallEnough()) {
-			return computeDirectly();
+			return doCoreComputation();
 		}
 
 		forkTasks();
@@ -55,7 +55,24 @@ public class ArraySumRecursiveTaskTest {
 	}
 
 	@Test
-	public void testThatDirectComputationBehavesAsExpected() {
+	public void testThatCoreComputationBehavesAsExpected() {
+		int[] arrayToCalculateSumOf = new int[] { 5 };
+		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
+
+		assertEquals(5, arraySumRecursiveTask.doCoreComputation());
+	}
+
+
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testThatCoreComputationOnlyCalculatesOneElement() {
+		int[] arrayToCalculateSumOf = new int[] { 5, 6 };
+		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
+		arraySumRecursiveTask.doCoreComputation();
+	}
+
+	@Test
+	public void testSmallestWorkingUnit() {
 		int[] arrayToCalculateSumOf = new int[] { 5 };
 		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
 
@@ -67,8 +84,15 @@ public class ArraySumRecursiveTaskTest {
 		int[] arrayToCalculateSumOf = new int[] { 1, 2, 3 };
 		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
 
-		assertArrayEquals(new int[] { 1 }, arraySumRecursiveTask.getLeftPart());
-		assertArrayEquals(new int[] { 2, 3 }, arraySumRecursiveTask.getRightPart());
+		assertArrayEquals(new int[][] { { 1 }, { 2, 3 } }, arraySumRecursiveTask.splitArrayInParts());
+	}
+
+	@Test
+	public void testThatSplittingTheTaskWorksAsExpecteForOneArrayElement() {
+		int[] arrayToCalculateSumOf = new int[] { 1 };
+		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
+
+		assertArrayEquals(new int[][] { {}, { 1 } }, arraySumRecursiveTask.splitArrayInParts());
 	}
 
 	@Test
@@ -79,6 +103,7 @@ public class ArraySumRecursiveTaskTest {
 }
   
 public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
+
 
 	private final int[] arrayToCalculateSumOf;
 	private ArraySumRecursiveTask leftTask;
@@ -91,7 +116,7 @@ public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 	@Override
 	protected Integer compute() {
 		if (workingUnitSmallEnough()) {
-			return computeDirectly();
+			return doCoreComputation();
 		}
 
 		forkTasks();
@@ -100,31 +125,33 @@ public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 
 	private boolean workingUnitSmallEnough() {
 		return arrayToCalculateSumOf.length == 1;
-	}
+ 	}
 
-	private int computeDirectly() {
-		return arrayToCalculateSumOf[0];
+	int doCoreComputation() {
+		if (arrayToCalculateSumOf.length == 1) {
+			return arrayToCalculateSumOf[0];
+		}
+
+		throw new IllegalArgumentException();
 	}
 
 	private void forkTasks() {
-		int[] left = getLeftPart();
-		int[] right = getRightPart();
+		int[][] parts = splitArrayInParts();
 
-		leftTask = new ArraySumRecursiveTask(left);
-		rightTask = new ArraySumRecursiveTask(right);
+		leftTask = new ArraySumRecursiveTask(parts[0]);
+		rightTask = new ArraySumRecursiveTask(parts[1]);
 
 		leftTask.fork();
 		rightTask.fork();
 	}
 
-	int[] getLeftPart() {
+	public int[][] splitArrayInParts() {
 		int midpoint = arrayToCalculateSumOf.length / 2;
-		return Arrays.copyOfRange(arrayToCalculateSumOf, 0, midpoint);
-	}
 
-	int[] getRightPart() {
-		int midpoint = arrayToCalculateSumOf.length / 2;
-		return Arrays.copyOfRange(arrayToCalculateSumOf, midpoint, arrayToCalculateSumOf.length);
+		int[] left = Arrays.copyOfRange(arrayToCalculateSumOf, 0, midpoint);
+		int[] right = Arrays.copyOfRange(arrayToCalculateSumOf, midpoint, arrayToCalculateSumOf.length);
+
+		return new int[][] { left, right };
 	}
 
 	private int joinTasks() {
@@ -134,5 +161,5 @@ public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 	static int mergeResults(final int leftResult, final int rightResult) {
 		return leftResult + rightResult;
 	}
-
+	
 }

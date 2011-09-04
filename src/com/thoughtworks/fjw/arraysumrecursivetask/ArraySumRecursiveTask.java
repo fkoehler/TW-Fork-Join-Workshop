@@ -3,43 +3,63 @@ package com.thoughtworks.fjw.arraysumrecursivetask;
 import java.util.Arrays;
 import java.util.concurrent.RecursiveTask;
 
-import com.thoughtworks.fjw.utils.Utils;
+public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 
-public class ArraySumRecursiveTask extends RecursiveTask<Long> {
-
-	private static final long serialVersionUID = 1L;
 	private final int[] arrayToCalculateSumOf;
+	private ArraySumRecursiveTask leftTask;
+	private ArraySumRecursiveTask rightTask;
 
 	public ArraySumRecursiveTask(final int[] arrayToCalculateSumOf) {
 		this.arrayToCalculateSumOf = arrayToCalculateSumOf;
 	}
 
 	@Override
-	protected Long compute() {
-		if (arrayToCalculateSumOf.length == 1) {
-			// working unit is small enough, do the work
-			return (long) arrayToCalculateSumOf[0];
+	protected Integer compute() {
+		if (workingUnitSmallEnough()) {
+			return doCoreComputation();
 		}
 
-		// split up the work into smaller parts (fork)
+		forkTasks();
+		return joinTasks();
+	}
+
+	private boolean workingUnitSmallEnough() {
+		return arrayToCalculateSumOf.length == 1;
+	}
+
+	int doCoreComputation() {
+		if (arrayToCalculateSumOf.length == 1) {
+			return arrayToCalculateSumOf[0];
+		}
+
+		throw new IllegalArgumentException();
+	}
+
+	private void forkTasks() {
+		int[][] parts = splitArrayInParts();
+
+		leftTask = new ArraySumRecursiveTask(parts[0]);
+		rightTask = new ArraySumRecursiveTask(parts[1]);
+
+		leftTask.fork();
+		rightTask.fork();
+	}
+
+	public int[][] splitArrayInParts() {
 		int midpoint = arrayToCalculateSumOf.length / 2;
 
-		int[] l1 = Arrays.copyOfRange(arrayToCalculateSumOf, 0, midpoint);
-		int[] l2 = Arrays.copyOfRange(arrayToCalculateSumOf, midpoint, arrayToCalculateSumOf.length);
+		int[] left = Arrays.copyOfRange(arrayToCalculateSumOf, 0, midpoint);
+		int[] right = Arrays.copyOfRange(arrayToCalculateSumOf, midpoint, arrayToCalculateSumOf.length);
 
-		ArraySumRecursiveTask s1 = new ArraySumRecursiveTask(l1);
-		ArraySumRecursiveTask s2 = new ArraySumRecursiveTask(l2);
+		return new int[][] { left, right };
+	}
 
-		s1.fork();
-		long result2 = s2.compute();
+	private int joinTasks() {
+		return mergeResults(leftTask.join(), rightTask.join());
+	}
 
-		// join the calculated parts and do the real calculation
-		long result1 = s1.join();
-
-		Utils.doCpuIntensiveCalculation();
-
-		// merge/join the calculation
-		return result1 + result2;
+	static int mergeResults(final int leftResult, final int rightResult) {
+		return leftResult + rightResult;
 	}
 
 }

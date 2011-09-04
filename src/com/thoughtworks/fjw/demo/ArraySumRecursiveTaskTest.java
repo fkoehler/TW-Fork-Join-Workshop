@@ -24,6 +24,21 @@ public class ArraySumRecursiveTaskTest {
 		int[] arrayToCalculateSumOf = new int[] { 5 };
 		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
 
+		assertEquals(5, arraySumRecursiveTask.doCoreComputation());
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testThatCoreComputationOnlyCalculatesOneElement() {
+		int[] arrayToCalculateSumOf = new int[] { 5, 6 };
+		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
+		arraySumRecursiveTask.doCoreComputation();
+	}
+
+	@Test
+	public void testSmallestWorkingUnit() {
+		int[] arrayToCalculateSumOf = new int[] { 5 };
+		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
+
 		assertEquals(new Integer(5), arraySumRecursiveTask.compute());
 	}
 
@@ -32,8 +47,15 @@ public class ArraySumRecursiveTaskTest {
 		int[] arrayToCalculateSumOf = new int[] { 1, 2, 3 };
 		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
 
-		assertArrayEquals(new int[] { 1 }, arraySumRecursiveTask.getLeftPart());
-		assertArrayEquals(new int[] { 2, 3 }, arraySumRecursiveTask.getRightPart());
+		assertArrayEquals(new int[][] { { 1 }, { 2, 3 } }, arraySumRecursiveTask.splitArrayInParts());
+	}
+
+	@Test
+	public void testThatSplittingTheTaskWorksAsExpecteForOneArrayElement() {
+		int[] arrayToCalculateSumOf = new int[] { 1 };
+		ArraySumRecursiveTask arraySumRecursiveTask = new ArraySumRecursiveTask(arrayToCalculateSumOf);
+
+		assertArrayEquals(new int[][] { {}, { 1 } }, arraySumRecursiveTask.splitArrayInParts());
 	}
 
 	@Test

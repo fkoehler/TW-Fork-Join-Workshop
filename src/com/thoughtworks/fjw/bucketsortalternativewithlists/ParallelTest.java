@@ -1,4 +1,4 @@
-package com.thoughtworks.fjw.bucketsortfablists;
+package com.thoughtworks.fjw.bucketsortalternativewithlists;
 
 import static org.junit.Assert.assertEquals;
 
