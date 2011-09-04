@@ -19,8 +19,6 @@ public class ParallelBucketSortTask extends RecursiveTask<SortedMap<Integer, Lis
 	public ParallelBucketSortTask(final SortedMap<Integer, List<Integer>> aBucketMap) {
 		super();
 		bucketMap = aBucketMap;
-
-		LOGGER.addHandler(TimeKeeper.getFileHandler());
 	}
 
 	@Override
