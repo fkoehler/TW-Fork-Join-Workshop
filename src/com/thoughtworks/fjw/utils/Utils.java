@@ -1,5 +1,14 @@
 package com.thoughtworks.fjw.utils;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
@@ -40,6 +49,25 @@ public class Utils {
 			arrayToCalculateSumOf[i] = generator.nextInt(500000);
 		}
 		return arrayToCalculateSumOf;
+	}
+
+	public static long calculateSumOfArray(final int[] arrayToCalculateSumOf) {
+		long expected = 0;
+		for (int value : arrayToCalculateSumOf) {
+			expected += value;
+		}
+
+		return expected;
+	}
+
+	public static BufferedReader getBufferedReaderOldFashionedly(final String resourceName) throws IOException {
+		InputStream inStream = new FileInputStream(resourceName);
+		return new BufferedReader(new InputStreamReader(inStream));
+	}
+
+	public static BufferedReader getBufferedReaderByNIO(final String resourceName) throws IOException {
+		Path path = FileSystems.getDefault().getPath(resourceName);
+		return Files.newBufferedReader(path, Charset.defaultCharset());
 	}
 
 }

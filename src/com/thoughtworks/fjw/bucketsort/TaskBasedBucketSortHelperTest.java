@@ -51,6 +51,8 @@ public class TaskBasedBucketSortHelperTest {
 		timeKeeper.addFileHandlerToLogger(Logger.getLogger(TaskBasedBucketSortHelper.class.getCanonicalName()));
 		timeKeeper.addFileHandlerToLogger(Logger.getLogger(ParallelBucketSortTask.class.getCanonicalName()));
 		timeKeeper.addFileHandlerToLogger(LOGGER);
+
+		LOGGER.info(TimeKeeper.createLogTitle("Action", "Thread Id", "Start time", "Stop time", "Diff", "LogCode"));
 	}
 
 	/*
@@ -65,7 +67,8 @@ public class TaskBasedBucketSortHelperTest {
 
 	@Test
 	public void shouldSortListOfIntegersSequentially() {
-		String context = "Sorting " + listSize + " integers in a sequential fashion";
+		String context = this.getClass().getCanonicalName() + " Sorting " + listSize
+				+ " integers in a sequential fashion";
 
 		SortedMap<Integer, List<Integer>> unsynchronisedBucketMap = new TreeMap<Integer, List<Integer>>();
 
@@ -76,7 +79,8 @@ public class TaskBasedBucketSortHelperTest {
 
 	@Test
 	public void shouldSortListOfIntegersWithUnsynchronisedMap() {
-		String context = "Sorting " + listSize + " integers with unsynchronised buckets";
+		String context = this.getClass().getCanonicalName() + " Sorting " + listSize
+				+ " integers with unsynchronised buckets";
 
 		SortedMap<Integer, List<Integer>> unsynchronisedBucketMap = new TreeMap<Integer, List<Integer>>();
 
@@ -88,7 +92,8 @@ public class TaskBasedBucketSortHelperTest {
 	@Test
 	public void shouldSortListOfIntegersWithThreadSafeMap() {
 
-		String context = "Sorting " + listSize + " integers with threadsafe buckets";
+		String context = this.getClass().getCanonicalName() + " Sorting " + listSize
+				+ " integers with threadsafe buckets";
 
 		SortedMap<Integer, List<Integer>> threadsafeBucketMap = Collections.synchronizedSortedMap(new TreeMap<Integer, List<Integer>>());
 
@@ -125,6 +130,6 @@ public class TaskBasedBucketSortHelperTest {
 		Assert.assertEquals("sets derived from the input and output lists should contain the same elements", inputSet,
 				outputSet);
 		Assert.assertTrue("list should be sorted", listGenerator.isListSorted(outputList));
-
 	}
+
 }

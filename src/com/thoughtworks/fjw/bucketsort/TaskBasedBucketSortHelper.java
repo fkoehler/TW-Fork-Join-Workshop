@@ -39,6 +39,6 @@ public class TaskBasedBucketSortHelper implements IBucketSortHelper<Integer> {
 		long stop = System.currentTimeMillis();
 		LOGGER.info(TimeKeeper.createLogMessage(this.getClass().getCanonicalName() + " having invoked forkJoinPool",
 				Thread.currentThread().getId(), start, stop, LogCode.INVOKE));
-
 	}
+
 }

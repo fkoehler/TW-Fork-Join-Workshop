@@ -36,7 +36,6 @@ public class ParallelBucketSortTaskTest {
 		for (ParallelBucketSortTask aSubTask : subTaskSet) {
 			Assert.assertEquals("sub tasks should contain buckets ot size 1", 1, aSubTask.compute().size());
 		}
-
 	}
 
 	@Test
@@ -49,6 +48,6 @@ public class ParallelBucketSortTaskTest {
 		LOGGER.info(bucketMap.toString());
 
 		Assert.assertTrue("", listGenerator.isListSorted(result.get(result.firstKey())));
-
 	}
+
 }

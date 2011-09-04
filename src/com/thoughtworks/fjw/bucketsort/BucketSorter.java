@@ -26,7 +26,7 @@ public class BucketSorter implements ISorter<Integer> {
 		prepareBucketMapAndBuckets();
 	}
 
-	/*
+	/*  
 	 * Allows to inject different kinds of bucket maps, e.g. a thread-safe one as opposed to an unsynchronised one. 
 	 * 
 	 * A bucket map that is injected is always cleared first.
@@ -140,7 +140,7 @@ public class BucketSorter implements ISorter<Integer> {
 		/*
 		 * Why '... / bucketWidth)) * bucketWidth...'? To use an exact multiple of the bucket width.
 		 */
-		return new Integer((int) Math.floor(((anInteger.intValue() - minValue) / bucketWidth)) * bucketWidth + minValue);
+		return new Integer((int) Math.floor((anInteger.intValue() - minValue) / bucketWidth) * bucketWidth + minValue);
 	}
 
 	private void sortBuckets() {
