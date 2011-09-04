@@ -1,4 +1,4 @@
-package com.thoughtworks.fjw.bucketsortfab;
+package com.thoughtworks.fjw.bucketsortfalternative;
 
 import static org.junit.Assert.assertArrayEquals;
 
