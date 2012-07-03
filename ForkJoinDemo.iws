@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769bddcf-dea6-48be-91ae-250ed618d694" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTaskTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTaskTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.hamcrest.core_1.1.0.v20090501071000.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArraySumRecursiveTaskTest.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArraySumRecursiveTask.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForkJoinDemo.iml" afterPath="$PROJECT_DIR$/ForkJoinDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForkJoinDemo.ipr" afterPath="$PROJECT_DIR$/ForkJoinDemo.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForkJoinDemo.iws" afterPath="$PROJECT_DIR$/ForkJoinDemo.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTaskTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTaskTest.java" />
     </list>
     <ignored path="ForkJoinDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,15 +61,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArrayChecksumWithArraysRecursiveTaskTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTaskTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ArrayChecksumWithListsRecursiveTaskTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,10 +81,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayChecksumRecursiveTaskTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ArrayChecksumRecursiveTaskTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3858785">
+            <state line="16" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BucketSortTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BucketSortTaskTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="35" selection-start="730" selection-end="730" vertical-scroll-proportion="0.591133">
               <folding />
             </state>
           </provider>
@@ -146,15 +144,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/List.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="598" column="12" selection-start="27149" selection-end="27149" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="demo.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/demo.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/_ArrayChecksumRecursiveTaskTest.java" />
         <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java" />
         <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTask.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTaskTest.java" />
       </list>
     </option>
   </component>
@@ -325,6 +315,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ForkJoinDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TW-Fork-Join-Workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fjw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bucketsortalternativewithlists" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -707,18 +719,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ForkJoinDemo.ipr">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="200" selection-end="200" vertical-scroll-proportion="0.087090164" />
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/concurrent/RecursiveTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="22" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/jsr166.jar!/java/util/concurrent/RecursiveTask.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="22" selection-start="167" selection-end="167" vertical-scroll-proportion="0.08561644">
@@ -814,7 +814,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3858785">
+        <state line="16" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortalternativewithlists/BucketSortTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="730" selection-end="730" vertical-scroll-proportion="0.591133">
           <folding />
         </state>
       </provider>
