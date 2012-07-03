@@ -3,13 +3,13 @@ package com.thoughtworks.fjw.demo;
 import java.util.Arrays;
 import java.util.concurrent.RecursiveTask;
 
-public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
+public class ArrayChecksumWithArraysRecursiveTask extends RecursiveTask<Integer> {
 
 	private final int[] arrayToCalculateSumOf;
-	private ArraySumRecursiveTask leftTask;
-	private ArraySumRecursiveTask rightTask;
+	private ArrayChecksumWithArraysRecursiveTask leftTask;
+	private ArrayChecksumWithArraysRecursiveTask rightTask;
 
-	public ArraySumRecursiveTask(final int[] arrayToCalculateSumOf) {
+	public ArrayChecksumWithArraysRecursiveTask(final int[] arrayToCalculateSumOf) {
 		this.arrayToCalculateSumOf = arrayToCalculateSumOf;
 	}
 
@@ -38,8 +38,8 @@ public class ArraySumRecursiveTask extends RecursiveTask<Integer> {
 	private void forkTasks() {
 		int[][] parts = splitArrayInParts();
 
-		leftTask = new ArraySumRecursiveTask(parts[0]);
-		rightTask = new ArraySumRecursiveTask(parts[1]);
+		leftTask = new ArrayChecksumWithArraysRecursiveTask(parts[0]);
+		rightTask = new ArrayChecksumWithArraysRecursiveTask(parts[1]);
 
 		leftTask.fork();
 		rightTask.fork();

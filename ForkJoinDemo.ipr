@@ -27,6 +27,10 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="IdProvider" IDEtalkID="C4119C610FC99765E1E8782E3CDEFB3A" />
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
     <option name="OPTION_SCOPE" value="protected" />
@@ -49,7 +53,11 @@
     <option name="myDefaultNotNull" value="org.jetbrains.annotations.NotNull" />
     <option name="myNullables">
       <value>
-        <list size="0" />
+        <list size="3">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+        </list>
       </value>
     </option>
     <option name="myNotNulls">
@@ -188,11 +196,26 @@
       <module fileurl="file://$PROJECT_DIR$/ForkJoinDemo.iml" filepath="$PROJECT_DIR$/ForkJoinDemo.iml" />
     </modules>
   </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="Herbstcampus JDK 1.7.0" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+  </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="hamcrest-all-1.3.0RC2">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/hamcrest-all-1.3.0RC2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/hamcrest-all-1.3.0RC2.jar!/" />
+      </SOURCES>
+    </library>
   </component>
 </project>
 

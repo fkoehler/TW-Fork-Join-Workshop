@@ -2,75 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769bddcf-dea6-48be-91ae-250ed618d694" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForkJoinDemo.eml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ForkJoinDemo.iml" />
-      <change type="DELETED" beforePath="C:\Users\Fabian\Projekte\TW-Fork-Join-Workshop\ivy.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Fabian\Projekte\TW-Fork-Join-Workshop\ivysettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Fabian\Projekte\TW-Fork-Join-Workshop\lib\ujmp-complete-0.2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Fabian\Projekte\TW-Fork-Join-Workshop\src\com\thoughtworks\fjw\bucketsort\ActionCode.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.runtime.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.runtime.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.launching.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.launching.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.ui.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.ui.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jsr166.jar" afterPath="$PROJECT_DIR$/lib/jsr166.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/perf4j-0.9.13.jar" afterPath="$PROJECT_DIR$/lib/perf4j-0.9.13.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTaskTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTask.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTaskTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.hamcrest.core_1.1.0.v20090501071000.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArraySumRecursiveTaskTest.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArraySumRecursiveTask.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForkJoinDemo.iml" afterPath="$PROJECT_DIR$/ForkJoinDemo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForkJoinDemo.ipr" afterPath="$PROJECT_DIR$/ForkJoinDemo.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ForkJoinDemo.iws" afterPath="$PROJECT_DIR$/ForkJoinDemo.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveAction.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionExecuteMultipleTasksInPoolTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionExecuteMultipleTasksInPoolTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionForkJoin.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionForkJoin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionForkJoinTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionForkJoinTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionLoggingTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionLoggingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionViaExecuteTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionViaExecuteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionViaSubmitTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursiveaction/ArraySumRecursiveActionViaSubmitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursivetask/ArraySumRecursiveTask.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursivetask/ArraySumRecursiveTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursivetask/ArraySumRecursiveTaskTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/arraysumrecursivetask/ArraySumRecursiveTaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ActionBasedBucketSortHelper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ActionBasedBucketSortHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ActionBasedBucketSortHelperTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ActionBasedBucketSortHelperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/BucketSorter.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/BucketSorter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/BucketSorterTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/BucketSorterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/IBucketSortHelper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/IBucketSortHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/MockBucketSortHelper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/MockBucketSortHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortAction.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortActionTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortActionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortHelper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortTask.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortTaskTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/ParallelBucketSortTaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/SequentialBucketSortHelper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/SequentialBucketSortHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/SequentialBucketSortHelperTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/SequentialBucketSortHelperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/TaskBasedBucketSortHelper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/TaskBasedBucketSortHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/TaskBasedBucketSortHelperTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsort/TaskBasedBucketSortHelperTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/BucketSortServiceSeq.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/BucketSortServiceSeq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/BucketSortTask.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/BucketSortTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/BucketSortTaskTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/BucketSortTaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/ParallelTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/ParallelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/SequentialTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfab/SequentialTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfablists/BucketSortTask.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfablists/BucketSortTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfablists/BucketSortTaskTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfablists/BucketSortTaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfablists/ParallelTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/bucketsortfablists/ParallelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/CalculatePiAction.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/CalculatePiAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/CalculatePiServiceSeq.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/CalculatePiServiceSeq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/ParallelTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/ParallelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/SequentialTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/calculatepi/SequentialTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/MergeSortAction.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/MergeSortAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/MergeSortServiceSeq.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/MergeSortServiceSeq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/ParallelTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/ParallelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/SequentialTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/mergesort/SequentialTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/ParallelTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/ParallelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/SequentialTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/SequentialTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/ShortestPathCalculatorAction.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/ShortestPathCalculatorAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/ShortestPathServiceSeq.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/shortestpath/ShortestPathServiceSeq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/sort/ISorter.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/sort/ISorter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/LargeInts.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/LargeInts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/ListGenerator.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/ListGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/ListGeneratorTest.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/ListGeneratorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/TimeKeeper.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/TimeKeeper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/Utils.java" />
     </list>
     <ignored path="ForkJoinDemo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,7 +27,6 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-    <option name="REVERSE_PATCH" value="false" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -128,7 +71,100 @@
     <favorites_list name="ForkJoinDemo" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ArrayChecksumWithArraysRecursiveTaskTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayChecksumWithListsRecursiveTaskTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="0" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayChecksumWithListsRecursiveTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="80" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1288#1303#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayChecksumRecursiveTaskTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3858785">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayChecksumRecursiveTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeKeeper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/TimeKeeper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="13" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LargeInts.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/LargeInts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="17" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="598" column="12" selection-start="27149" selection-end="27149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/demo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="39" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -136,8 +172,21 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
-    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArraySumRecursiveTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/demo.txt" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArraySumRecursiveTask.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTask.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/_ArrayChecksumRecursiveTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTask.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_INTERNAL" />
@@ -146,6 +195,11 @@
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1680" />
+    <option name="height" value="1024" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -153,7 +207,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -172,7 +226,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,6 +261,28 @@
               <option name="myItemId" value="fjw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ForkJoinDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TW-Fork-Join-Workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fjw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -227,36 +302,191 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bucketsortfab" />
+              <option name="myItemId" value="mergesort" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ForkJoinDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TW-Fork-Join-Workshop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fjw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.0" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.lastSelected" value="preferences.externalResources" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.BucketSortTaskTest">
-    <configuration default="false" name="BucketSortTaskTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.thoughtworks.fjw.demo" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.thoughtworks.fjw.demo" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ArrayChecksumWithListsRecursiveTaskTest">
+    <configuration default="false" name="ArrayChecksumWithListsRecursiveTaskTest.testThatCompleteTaskWorksAsExpected" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.fjw.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="ForkJoinDemo" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.thoughtworks.fjw.bucketsortfab" />
-      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.fjw.bucketsortfab.BucketSortTaskTest" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.fjw.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.fjw.demo.ArrayChecksumWithListsRecursiveTaskTest" />
+      <option name="METHOD_NAME" value="testThatCompleteTaskWorksAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ArrayChecksumWithListsRecursiveTaskTest.testThatDirectComputationBehavesAsExpected" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.fjw.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ForkJoinDemo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.fjw.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.fjw.demo.ArrayChecksumWithListsRecursiveTaskTest" />
+      <option name="METHOD_NAME" value="testThatDirectComputationBehavesAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ArrayChecksumWithListsRecursiveTaskTest.testThatSplittingTheTaskWorksAsExpected" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.fjw.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ForkJoinDemo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.fjw.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.fjw.demo.ArrayChecksumWithListsRecursiveTaskTest" />
+      <option name="METHOD_NAME" value="testThatSplittingTheTaskWorksAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ArrayChecksumWithListsRecursiveTaskTest.testThatMergingResultBehavesAsExpected" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.fjw.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ForkJoinDemo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.fjw.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.fjw.demo.ArrayChecksumWithListsRecursiveTaskTest" />
+      <option name="METHOD_NAME" value="testThatMergingResultBehavesAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ArrayChecksumWithListsRecursiveTaskTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.thoughtworks.fjw.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ForkJoinDemo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.thoughtworks.fjw.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.thoughtworks.fjw.demo.ArrayChecksumWithListsRecursiveTaskTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -304,6 +534,7 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -323,6 +554,7 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -347,8 +579,12 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BucketSortTaskTest" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayChecksumWithListsRecursiveTaskTest.testThatCompleteTaskWorksAsExpected" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayChecksumWithListsRecursiveTaskTest.testThatDirectComputationBehavesAsExpected" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayChecksumWithListsRecursiveTaskTest.testThatSplittingTheTaskWorksAsExpected" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayChecksumWithListsRecursiveTaskTest.testThatMergingResultBehavesAsExpected" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ArrayChecksumWithListsRecursiveTaskTest" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -356,7 +592,7 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -371,6 +607,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
@@ -382,28 +619,37 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919786" sideWeight="0.67092335" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24877451" sideWeight="0.72868216" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27131784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -429,7 +675,16 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -457,6 +712,113 @@
         <state line="5" column="39" selection-start="200" selection-end="200" vertical-scroll-proportion="0.087090164" />
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/concurrent/RecursiveTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="22" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jsr166.jar!/java/util/concurrent/RecursiveTask.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="167" selection-end="167" vertical-scroll-proportion="0.08561644">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/concurrent/ForkJoinPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1548" column="16" selection-start="64268" selection-end="64268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/concurrent/ForkJoinTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="620" column="33" selection-start="24074" selection-end="24074" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="598" column="12" selection-start="27149" selection-end="27149" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithArraysRecursiveTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/demo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="39" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/LargeInts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/TimeKeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumWithListsRecursiveTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="80" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1288#1303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thoughtworks/fjw/demo/ArrayChecksumRecursiveTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="411" selection-end="411" vertical-scroll-proportion="0.3858785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -474,7 +836,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -497,7 +859,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
